@@ -5,17 +5,20 @@
   background-color: $white-four;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
   padding: 0 15px;
   .main__section1 {
     width: 100%;
     padding-top: 100px;
     .section1__img {
+      background-image: url(../images/tarjetas-molonas.png);
+      background-size: cover;
       display: block;
       margin: auto;
-      width: 256px;
-      height: 67px;
+      width: 250px;
+      height: 63px;
     }
   }
   .main__section2 {
@@ -43,13 +46,15 @@
     }
   }
   .main__section3 {
+    width: 100%;
+    max-width: 300px;
     font-size: 13px;
     font-family: $font-open;
     color: $gunmetal;
     border: 1px solid;
     border-radius: 4px;
     border-color: rgba(225, 115, 52, 0.2);
-    padding: 20px 24px;
+    padding: 20px 20px;
 
     .section3__list {
       display: grid;
@@ -79,6 +84,36 @@
       height: 42px;
       margin: 0 auto;
       border-radius: 20px;
+    }
+  }
+  @media all and (min-width: 768px) {
+    .main__section1 {
+      padding-top: 250px;
+      .section1__img {
+        background-image: url(../images/tarjetas-molonas@2x.png);
+        background-size: cover;
+        width: 419px;
+        height: 107px;
+      }
+    }
+    .main__section2 {
+      .section2__title {
+        font-size: 24px;
+      }
+      .section2__text {
+        font-size: 16px;
+      }
+    }
+    .main__section3 {
+      margin: auto;
+      font-size: 16px;
+      .list__item {
+        padding: 0 15px;
+        .item__img {
+          color: $dull-orange;
+          font-size: 28px;
+        }
+      }
     }
   }
 }
