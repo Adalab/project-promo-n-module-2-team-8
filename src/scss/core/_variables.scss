@@ -26,3 +26,18 @@ $white-two: #fff;
 $font-merriweather: "Merriweather", serif;
 $font-montserrat: "Montserrat", sans-serif;
 $font-open: "Open Sans", sans-serif;
+
+//mixins
+
+@mixin form_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: $gunmetal;
+}
+
+@mixin form_label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $dark-green-blue;
+}

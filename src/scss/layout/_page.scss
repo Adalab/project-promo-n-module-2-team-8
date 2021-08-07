@@ -6,4 +6,18 @@
 
 /*fill*/
 
+.form__title {
+  @include form_title;
+}
+.fill {
+  font-family: $font-open;
+  &form {
+    &label {
+      @include form_label;
+    }
+    &input {
+    }
+  }
+}
+
 /*share*/
