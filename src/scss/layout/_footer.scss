@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  background-color: $white-two;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  font-family: $font-open;
+
+  .footer__copyright {
+    font-size: 14px;
+    color: rgba(107, 107, 107, 0.5);
+  }
+
+  .footer__image {
+    width: 103px;
+    height: 40px;
+    padding-top: 20px;
+  }
+}
