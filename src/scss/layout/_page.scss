@@ -5,6 +5,7 @@
         @include form_title;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        height: 41px;
     }
     &__title {
         display: flex;
@@ -28,6 +29,7 @@
     font-family: $font-open;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .dropdown {
@@ -43,6 +45,9 @@
         border-radius: 12px;
         width: 199px;
         height: 50px;
+        margin: 30px 24px 30px 20px;
+        padding: 13px 18px 13px 17px;
+        border-bottom: solid 1px $white-two;
     }
     &__message {
         font-family: $font-open;
@@ -57,5 +62,8 @@
         border-radius: 3px;
         width: 181px;
         height: 30px;
+        margin: 10px 33px 30px 29px;
+        padding: 3px 9px 6px 10.5px;
+        border-bottom: solid 1px $white-two;
     }
 }
