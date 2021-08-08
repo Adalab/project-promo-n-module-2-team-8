@@ -1,0 +1,61 @@
+/*Share*/
+
+.form {
+    &__parameters {
+        @include form_title;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__title {
+        display: flex;
+        margin-bottom: 21px;
+        font-family: $font-open;
+        font-size: 18px;
+    }
+}
+
+.fa-share-alt {
+    color: $dull-orange;
+    margin-right: 10px;
+}
+
+.fa-chevron-down {
+    color: $gunmetal;
+    margin-left: auto;
+}
+
+.share {
+    font-family: $font-open;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__button--create {
+        background-color: $dull-orange;
+        color: $white-two;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 12px;
+        width: 199px;
+        height: 50px;
+    }
+    &__message {
+        font-family: $font-open;
+        font-size: 18px;
+        font-weight: 600;
+        color: $gunmetal;
+    }
+    &__button--tw {
+        background-color: $azure;
+        color: $white-two;
+        font-size: 14px;
+        border-radius: 3px;
+        width: 181px;
+        height: 30px;
+    }
+}

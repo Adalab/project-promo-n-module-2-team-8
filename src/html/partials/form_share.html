@@ -1,8 +1,14 @@
-<div>
-    Comparte
+<section class="share">
+    <include src="./parameters.html" icon="fas fa-share-alt" text="Comparte" arrow="fas fa-chevron-down"></include>
 
-    <button>Crear tarjeta</button>
+    <div class="dropdown">
+        <button class="dropdown__button--create">
+			<i class="far fa-address-card"></i>Crear tarjeta
+		</button>
 
-    <p>La tarjeta ha sido creada</p>
-    <button>Compartir en Twitter</button>
-</div>
+        <p class="dropdown__message">La tarjeta ha sido creada</p>
+        <button class="dropdown__button--tw">
+			<i class="fab fa-twitter"></i>Compartir en Twitter
+		</button>
+    </div>
+</section>
