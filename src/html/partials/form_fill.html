@@ -1,36 +1,62 @@
 <section class="fill">
-  <include src="./parameters.html" icon="far fa-keyboard" text="Rellena" arrow="fas fa-chevron-down"
+  <include
+    src="./parameters.html"
+    icon="far fa-keyboard"
+    text="Rellena"
+    arrow="fas fa-chevron-down"
   ></include>
+  <form class="fill__form" action="https://formspree.io/f/mvodwylg">
+    <label class="fill__form--label" for="name"> Nombre Completo</label>
+    <input
+      class="fill__form--input name"
+      type="text"
+      placeholder="Ej: Sally Jill"
+    />
 
-  <form action="https://formspree.io/f/mvodwylg">
-    <label class="fill__form" for="name">
-      Nombre Completo
-      <input class="fill__form--input name" type="text" placeholder="Ej: Sally Jill"/>
-    </label>
-    <label class="fill__form--label" for="job">
-      Puesto
-      <input class="fill__form--input job" type="text" placeholder="Ej: Front-end unicorn"/>
-    </label>
-    <label class="fill__form--label" for="photo">
-      Imagen de perfil
-      <input class="fill__form--input photo" type="button" placeholder="Añadir imagen"/>
-      <div class="fill__form--photo"></div>
-    </label>
-    <label class="fill__form--label" for="email">
-      Email
-      <input class="fill__form--input email" type="email" placeholder="Ej: sally-hill@gmail.com"/>
-    </label>
-    <label class="fill__form--label" for="tel">
-      Teléfono
-      <input class="fill__form--input tel" type="tel" placeholder="Ej: 555-55-55-55"/>
-    </label>
-    <labe class="fill__form--label" for="linkedin">
-      Linkedin
-      <input class="fill__form--input linkedin" type="text" placeholder="Ej: linkedin.com/in/sally.hill"/>
-    </label>
-    <label class="fill__form--label" for="github">
-      Github
-      <input class="fill__form--input github" type="text" placeholder="Ej: @sally-hill"/>
-    </label>
+    <label class="fill__form--label" for="job"> Puesto</label>
+    <input
+      class="fill__form--input job"
+      type="text"
+      placeholder="Ej: Front-end unicorn"
+    />
+
+    <label class="fill__form--label" for="photo photo__square">
+      Imagen de perfil</label
+    >
+    <input
+      class="fill__form--input photo"
+      type="button"
+      value="Añadir imagen"
+    />
+    <input class="fill__form--input photo__square" type="text" />
+
+    <label class="fill__form--label" for="email"> Email</label>
+    <input
+      class="fill__form--input email"
+      type="email"
+      placeholder="Ej: sally-hill@gmail.com"
+    />
+
+    <label class="fill__form--label" for="tel"> Teléfono</label>
+    <input
+      class="fill__form--input tel"
+      type="tel"
+      placeholder="Ej: 555-55-55-55"
+    />
+
+    <label class="fill__form--label" for="linkedin"> Linkedin</label>
+    <input
+      class="fill__form--input linkedin"
+      type="text"
+      placeholder="Ej: linkedin.com/in/sally.hill"
+    />
+
+    <label class="fill__form--label" for="github"> Github</label>
+    <input
+      class="fill__form--input github"
+      type="text"
+      placeholder="Ej: @sally-hill"
+    />
   </form>
+  <!--<div class="form__line"></div>-->
 </section>
