@@ -11,6 +11,7 @@
       class="fill__form--input name"
       type="text"
       placeholder="Ej: Sally Jill"
+      required
     />
 
     <label class="fill__form--label" for="job"> Puesto</label>
@@ -18,6 +19,7 @@
       class="fill__form--input job"
       type="text"
       placeholder="Ej: Front-end unicorn"
+      required
     />
 
     <label class="fill__form--label" for="photo photo__square">
@@ -35,6 +37,7 @@
       class="fill__form--input email"
       type="email"
       placeholder="Ej: sally-hill@gmail.com"
+      required
     />
 
     <label class="fill__form--label" for="tel"> Teléfono</label>
@@ -42,6 +45,7 @@
       class="fill__form--input tel"
       type="tel"
       placeholder="Ej: 555-55-55-55"
+      ^[0-9]{9}$
     />
 
     <label class="fill__form--label" for="linkedin"> Linkedin</label>
