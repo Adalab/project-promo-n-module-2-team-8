@@ -1,34 +1,38 @@
-<section class="form_design">
-  <h2 class="design"><i class="far fa-object-ungroup">diseña</i></h2>
-  <h3 class="colors">colores</h3>
-  <section class="check_box">
-    <form action="">
-      <input type="radio" id="blue" name="color" />
-      <label for="blue">
-        <section class="dark_blue">
-          <div class="box1"></div>
-          <div class="box2"></div>
-          <div class="box3"></div>
-        </section>
-      </label>
-      <input type="radio" id="red" name="color" />
-      <label for="red">
-        <section class="color_red">
-          <div class="box4"></div>
-          <div class="box5"></div>
-          <div class="box6"></div>
-        </section>
-      </label>
-      <input type="radio" id="orange" name="color" />
-      <label for="orange">
-        <section class="orange">
-          <div class="box7"></div>
-          <div class="box8"></div>
-          <div class="box9"></div>
-        </section>
-      </label>
-    </form>
-    <h2 class="fill"><i class="far fa-keyboard">rellena</i></h2>
-    <h2 class="share"><i class="fas fa-share-alt">comparte</i></h2>
-  </section>
-</section>
+<legend class="form_design">
+  <include
+    src="./parameters.html"
+    icon="far fa-object-ungroup"
+    text="Diseña"
+    arrow="fas fa-chevron-down"
+  ></include>
+
+  <fieldset class="check_box">
+    <label class="colors"
+      >colores
+
+      <input type="radio" id="blue" name="blue" />
+
+      <section class="dark_blue">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </section>
+
+      <input type="radio" id="red" name="red" />
+
+      <section class="color_red">
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+      </section>
+
+      <input type="radio" id="orange" name="orange" />
+
+      <section class="orange">
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+      </section>
+    </label>
+  </fieldset>
+</legend>

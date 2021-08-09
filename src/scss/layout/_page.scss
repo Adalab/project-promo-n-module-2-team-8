@@ -135,39 +135,48 @@
 }
 
 .box1 {
-  @include boxs(#114e4e);
+  @include boxs;
+  background-color: $dark-green-blue;
 }
 
 .box2 {
-  @include boxs(#438792);
+  @include boxs;
+  background-color: $dirty-blue;
 }
 
 .box3 {
-  @include boxs(#a2deaf);
+  @include boxs;
+  background-color: $hospital-green;
 }
 
 .box4 {
-  @include boxs(#420101);
+  @include boxs;
+  background-color: $dried-blood;
 }
 
 .box5 {
-  @include boxs(#bd1010);
+  @include boxs;
+  background-color: $rusty-red;
 }
 
 .box6 {
-  @include boxs(#e95626);
+  @include boxs;
+  background-color: $tomato;
 }
 
 .box7 {
-  @include boxs(#3e5b65);
+  @include boxs;
+  background-color: $slate;
 }
 
 .box8 {
-  @include boxs(#eab052);
+  @include boxs;
+  background-color: $faded-orange;
 }
 
 .box9 {
-  @include boxs(#a0c0cf);
+  @include boxs;
+  background-color: $light-grey-blue;
 }
 
 /*fill*/
