@@ -1,4 +1,4 @@
-/*index*/
+/************************************index**********************************/
 
 .page {
   height: 100vh;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-/*photo*/
+/***************************************photo***************************/
 .photo__container {
   box-sizing: border-box;
   background: linear-gradient(to bottom, $bfcdd-0-silver, $pale-grey);
@@ -105,7 +105,7 @@
   }
 }
 
-/*design*/
+/****************************************design****************************/
 
 .form_design {
   width: 320px;
@@ -170,7 +170,7 @@
   background-color: $light-grey-blue;
 }
 
-/*fill*/
+/********************************fill*****************************************/
 
 .form {
   &__parameters {
@@ -214,28 +214,23 @@
       grid-column: span 2;
     }
     .photo {
-      @include orange__button;
-      border: none;
-      border-radius: 4px;
-      height: 30px;
-      grid-column: span 1;
+      &__button {
+        @include orange__button;
+        border: none;
+        border-radius: 4px;
+        height: 30px;
+        grid-column: span 1;
+      }
+      &__square {
+        width: 30px;
+        height: 30px;
+        grid-column: span 1;
+      }
     }
-
-    .photo__square {
-      width: 30px;
-      height: 30px;
-      grid-column: span 1;
-    }
-
-    /*&__line {
-      height: 1px;
-      background-color: $white-two;
-      margin-top: 40px;
-    }*/
   }
 }
 
-/*share*/
+/*******************************************share******************************/
 
 .form {
   &__parameters {
