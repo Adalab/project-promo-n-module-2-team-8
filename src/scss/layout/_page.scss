@@ -1,0 +1,49 @@
+.form_design {
+  width: 320px;
+  background-color: red;
+  height: 340px;
+  font-size: 18px;
+  color: #54585a;
+}
+.design {
+  text-transform: uppercase;
+}
+.icon {
+  font-size: 18px;
+  color: #e17334;
+}
+.colors {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #54585a;
+}
+.check_box {
+  background-color: black;
+}
+.box1 {
+  @include boxs(#114e4e);
+}
+.box2 {
+  @include boxs(#438792);
+}
+.box3 {
+  @include boxs(#a2deaf);
+}
+.box4 {
+  @include boxs(#420101);
+}
+.box5 {
+  @include boxs(#bd1010);
+}
+.box6 {
+  @include boxs(#e95626);
+}
+.box7 {
+  @include boxs(#3e5b65);
+}
+.box8 {
+  @include boxs(#eab052);
+}
+.box9 {
+  @include boxs(#a0c0cf);
+}

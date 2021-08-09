@@ -26,3 +26,7 @@ $white-two: #fff;
 $font-merriweather: "Merriweather", serif;
 $font-montserrat: "Montserrat", sans-serif;
 $font-open: "Open Sans", sans-serif;
+@mixin boxs($background) {
+  width: 30px;
+  height: 25px;
+}
