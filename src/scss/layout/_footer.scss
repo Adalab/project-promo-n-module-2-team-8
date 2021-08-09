@@ -1,7 +1,8 @@
 .footer {
   box-sizing: border-box;
   width: 100%;
-  background-color: $white-two;
+  border-top: 1px solid $white-two;
+  background-color: $white-Two;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

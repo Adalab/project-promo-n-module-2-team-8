@@ -1,6 +1,5 @@
 .main {
   box-sizing: border-box;
-  width: 100%;
   flex-grow: 1;
   background-color: $white-four;
   display: flex;
@@ -9,111 +8,137 @@
   align-items: center;
   text-align: center;
   padding: 0 15px;
-  .main__section1 {
+
+  &__section1 {
     width: 100%;
     padding-top: 100px;
-    .section1__img {
-      background-image: url(../images/tarjetas-molonas.png);
-      background-size: cover;
-      display: block;
-      margin: auto;
-      width: 250px;
-      height: 63px;
-    }
   }
-  .main__section2 {
+  &__section2 {
     padding-bottom: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .section2__title {
-      padding-top: 40px;
-      font-size: 20px;
-      font-family: $font-merriweather;
-      color: $dull-orange;
-      font-weight: 900;
-    }
-    .section2__text {
-      max-width: 320px;
-      font-size: 13px;
-      font-family: $font-open;
-      color: $dark-green-blue;
-      text-align: center;
-      padding: 0 20px;
-      line-height: normal;
-    }
   }
-  .main__section3 {
+
+  &__section3 {
     width: 100%;
-    max-width: 300px;
+    max-width: 268px;
     font-size: 13px;
     font-family: $font-open;
     color: $gunmetal;
     border: 1px solid;
     border-radius: 4px;
     border-color: rgba(225, 115, 52, 0.2);
-    padding: 20px 20px;
-
-    .section3__list {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-
-      .list__item {
-        display: flex;
-        flex-direction: column;
-        .item__img {
-          color: $dull-orange;
-          font-size: 23px;
-        }
-      }
-    }
+    padding: 28px 18px;
   }
-  .main__section4 {
+
+  &__section4 {
     padding-top: 40px;
     padding-bottom: 30px;
-    .section4__button {
-      background-color: $dirty-blue;
-      color: $white-two;
-      font-family: $font-open;
-      font-size: 16px;
-      text-transform: uppercase;
-      width: 129px;
-      height: 42px;
-      margin: 0 auto;
-      border-radius: 20px;
-    }
   }
-  @media all and (min-width: 768px) {
-    .main__section1 {
+}
+
+.section1 {
+  &__img {
+    background-image: url(../images/tarjetas-molonas.png);
+    background-size: cover;
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 63px;
+  }
+}
+
+.section2 {
+  &__title {
+    padding-top: 40px;
+    font-size: 20px;
+    font-family: $font-merriweather;
+    color: $dull-orange;
+    font-weight: 900;
+  }
+  &__text {
+    max-width: 320px;
+    font-size: 13px;
+    font-family: $font-open;
+    color: $dark-green-blue;
+    text-align: center;
+    padding: 0 20px;
+    line-height: normal;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    color: $dull-orange;
+    font-size: 23px;
+  }
+}
+
+.section4 {
+  &__button {
+    background-color: $dirty-blue;
+    font-family: $font-open;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 129px;
+    height: 42px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  &__nav {
+    color: $white-Two;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .main {
+    &__section1 {
       padding-top: 250px;
-      .section1__img {
-        background-image: url(../images/tarjetas-molonas@2x.png);
-        background-size: cover;
-        width: 419px;
-        height: 107px;
-      }
     }
-    .main__section2 {
-      .section2__title {
-        font-size: 24px;
-      }
-      .section2__text {
-        font-size: 16px;
-      }
-    }
-    .main__section3 {
+    &__section3 {
       margin: auto;
       font-size: 16px;
-      .list__item {
-        padding: 0 15px;
-        .item__img {
-          color: $dull-orange;
-          font-size: 28px;
-        }
-      }
+    }
+  }
+  .section1 {
+    &__img {
+      background-image: url(../images/tarjetas-molonas@2x.png);
+      background-size: cover;
+      width: 419px;
+      height: 107px;
+    }
+  }
+  .section2 {
+    &__title {
+      font-size: 24px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  .section3 {
+    margin-top: 10px;
+  }
+
+  .list {
+    &__item {
+      padding: 0 15px;
+    }
+    &__img {
+      color: $dull-orange;
+      font-size: 28px;
     }
   }
 }

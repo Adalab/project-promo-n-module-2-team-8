@@ -1,4 +1,4 @@
-/************************************index**********************************/
+/******************************index*******************************/
 
 .page {
   height: 100vh;
@@ -6,7 +6,20 @@
   flex-direction: column;
 }
 
-/***************************************photo***************************/
+/*******************************main*******************************/
+
+.card {
+  background: linear-gradient(to bottom, $white-four, $white-Two);
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 40px 20px 20px;
+  }
+}
+
+/*******************************photo*******************************/
+
 .photo__container {
   box-sizing: border-box;
   background: linear-gradient(to bottom, $bfcdd-0-silver, $pale-grey);
@@ -15,8 +28,16 @@
   padding: 38px 35px 40px 45px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  @media all and (min-width: 768px) {
+    border-radius: 4px;
+    height: 100%;
+    margin-left: 30px; //se puede poner en la columna del formulario como margin-right
+    padding: 0;
+  }
 }
+
 .photo__reset {
   &--container {
     width: 240px;
@@ -25,7 +46,7 @@
   &--menu {
     width: 75px;
     height: 30px;
-    border: solid 1px $white-two;
+    border: solid 1px $white-Two;
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -46,7 +67,7 @@
   &--container {
     width: 240px;
     height: 329px;
-    background-color: $white-two;
+    background-color: $white-Two;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
     border-radius: 2px;
     box-sizing: border-box;
@@ -86,11 +107,9 @@
     background-size: cover;
     background-position: center;
   }
-
   &--rrss {
     display: flex;
     padding: 10px 0 12px 15px;
-
     &-icon {
       height: 32px;
       width: 32px;
@@ -105,72 +124,82 @@
   }
 }
 
-/****************************************design****************************/
-
-.form_design {
-  width: 320px;
-  background-color: red;
-  height: 340px;
-  font-size: 18px;
-  color: $gunmetal;
+//*******************************arrow*******************************/
+.form__arrow {
+  height: 18px;
+  width: 16px;
+  &--rotate {
+    transform: scaleY(-1);
+  }
 }
 
-.colors {
+/*******************************design*******************************/
+
+.design__legend {
+  font-size: 18px;
+  color: $gunmetal;
+  font-family: $font-open;
+  margin: 0 19px 0 20px;
+}
+
+.design__check {
   text-transform: uppercase;
   font-size: 14px;
   color: $gunmetal;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 20px;
+  margin-left: 39px;
 }
 
-.check_box {
-  background-color: black;
+.design__check--colors {
+  grid-column: 1/3;
+  grid-row: 1/4;
 }
 
-.box1 {
-  @include boxs;
-  background-color: $dark-green-blue;
+.design__check--section {
+  display: flex;
+  align-items: center;
 }
 
-.box2 {
-  @include boxs;
-  background-color: $dirty-blue;
+.design__check--section__box {
+  display: flex;
+  grid-column: 3/4;
+  margin-left: 10px;
+  .box {
+    @include boxs;
+    &__1 {
+      background-color: $dark-green-blue;
+    }
+    &__2 {
+      background-color: $dirty-blue;
+    }
+    &__3 {
+      background-color: $hospital-green;
+    }
+    &__4 {
+      background-color: $dried-blood;
+    }
+    &__5 {
+      background-color: $rusty-red;
+    }
+    &__6 {
+      background-color: $tomato;
+    }
+    &__7 {
+      background-color: $slate;
+    }
+    &__8 {
+      background-color: $faded-orange;
+    }
+    &__9 {
+      background-color: $light-grey-blue;
+    }
+  }
 }
 
-.box3 {
-  @include boxs;
-  background-color: $hospital-green;
-}
-
-.box4 {
-  @include boxs;
-  background-color: $dried-blood;
-}
-
-.box5 {
-  @include boxs;
-  background-color: $rusty-red;
-}
-
-.box6 {
-  @include boxs;
-  background-color: $tomato;
-}
-
-.box7 {
-  @include boxs;
-  background-color: $slate;
-}
-
-.box8 {
-  @include boxs;
-  background-color: $faded-orange;
-}
-
-.box9 {
-  @include boxs;
-  background-color: $light-grey-blue;
-}
-
-/********************************fill*****************************************/
+/*******************************fill*******************************/
 
 .form {
   &__parameters {
@@ -182,7 +211,6 @@
     color: $dull-orange;
     margin-right: 10px;
   }
-
   &__title {
     display: flex;
     margin-bottom: 21px;
@@ -196,12 +224,10 @@
 .fill {
   font-family: $font-open;
   margin: 0 19px 0 20px;
-
   &__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-
     &--label {
       @include form_label;
       grid-column: span 2;
@@ -214,37 +240,27 @@
       grid-column: span 2;
     }
     .photo {
-      &__button {
-        @include orange__button;
-        border: none;
-        border-radius: 4px;
-        height: 30px;
-        grid-column: span 1;
-      }
-      &__square {
-        width: 30px;
-        height: 30px;
-        grid-column: span 1;
-      }
+      @include orange__button;
+      border: none;
+      border-radius: 4px;
+      height: 30px;
+      grid-column: span 1;
+    }
+    .photo__square {
+      width: 30px;
+      height: 30px;
+      grid-column: span 1;
     }
   }
 }
 
-/*******************************************share******************************/
+/*******************************share*******************************/
 
-.form {
-  &__parameters {
-    @include form_title;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 41px;
-  }
-  &__title {
-    display: flex;
-    margin-bottom: 21px;
-    font-family: $font-open;
-    font-size: 18px;
-  }
+.share {
+  font-family: $font-open;
+  display: flex;
+  flex-direction: column;
+  margin: 0 19px 0 20px;
 }
 
 .fa-share-alt {
@@ -257,20 +273,13 @@
   margin-left: auto;
 }
 
-.share {
-  font-family: $font-open;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .dropdown {
   display: flex;
   flex-direction: column;
   align-items: center;
   &__button--create {
     background-color: $dull-orange;
-    color: $white-two;
+    color: $white-Two;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
@@ -298,4 +307,8 @@
     padding: 3px 9px 6px 10.5px;
     border-bottom: solid 1px $white-two;
   }
+}
+
+.hidden {
+  display: none;
 }

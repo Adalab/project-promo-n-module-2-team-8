@@ -17,7 +17,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
+
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Awesome profile-Cards</title>
   </head>
@@ -25,12 +25,15 @@
   <body>
     <div class="page">
       <include src="./partials/form_header.html" title=""></include>
-      <include src="./partials/form_photo.html"></include>
-      <form action="">
-      <include src="./partials/form_design.html"></include>
-      <include src="./partials/form_fill.html"></include>
-      <include src="./partials/form_share.html"></include>
-    </form>
+      <main class="card">
+        <include src="./partials/form_photo.html"></include>
+        <form class="form" action="">
+          <include src="./partials/form_design.html"></include>
+          <include src="./partials/form_fill.html"></include>
+          <include src="./partials/form_share.html"></include>
+        </form>
+      </main>
+
       <include src="./partials/footer.html"></include>
     </div>
     <script src="./assets/js/main.js"></script>

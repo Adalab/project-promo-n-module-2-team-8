@@ -1,38 +1,39 @@
-<legend class="form_design">
-  <include
-    src="./parameters.html"
-    icon="far fa-object-ungroup"
-    text="Diseña"
-    arrow="fas fa-chevron-down"
-  ></include>
+<section class="design">
+    <legend class="design__legend">
+        <include src="./parameters.html" icon="far fa-object-ungroup" text="Diseña" arrow="fas fa-chevron-down"></include>
+    </legend>
 
-  <fieldset class="check_box">
-    <label class="colors" for="colors"
-      >colores
+    <fieldset class="design__check">
+        <label class="design__check--colors" for="colors">colores</label>
 
-      <input type="radio" id="blue" name="colors" />
+        <section class="design__check--section">
+            <input type="radio" id="colors" name="blue" />
 
-      <section class="dark_blue">
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
-      </section>
+            <section class="design__check--section__box">
+                <div class="box box__1"></div>
+                <div class="box box__2"></div>
+                <div class="box box__3"></div>
+            </section>
+        </section>
 
-      <input type="radio" id="red" name="colors" />
+        <section class="design__check--section">
+            <input type="radio" id="colors" name="red" />
 
-      <section class="color_red">
-        <div class="box4"></div>
-        <div class="box5"></div>
-        <div class="box6"></div>
-      </section>
+            <section class="design__check--section__box">
+                <div class="box box__4"></div>
+                <div class="box box__5"></div>
+                <div class="box box__6"></div>
+            </section>
+        </section>
+        <section class="design__check--section">
+            <input type="radio" id="colors" name="orange" />
 
-      <input type="radio" id="orange" name="colors" />
-
-      <section class="orange">
-        <div class="box7"></div>
-        <div class="box8"></div>
-        <div class="box9"></div>
-      </section>
-    </label>
-  </fieldset>
-</legend>
+            <section class="design__check--section__box">
+                <div class="box box__7"></div>
+                <div class="box box__8"></div>
+                <div class="box box__9"></div>
+            </section>
+        </section>
+        <hr />
+    </fieldset>
+</section>
