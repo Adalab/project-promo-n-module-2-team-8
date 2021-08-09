@@ -1,0 +1,31 @@
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $white-two;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  font-family: $font-open;
+
+  .footer__copyright {
+    font-size: 14px;
+    color: rgba(107, 107, 107, 0.5);
+  }
+
+  .footer__image {
+    width: 103px;
+    height: 40px;
+    padding-top: 20px;
+  }
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+    .footer__image {
+      padding-top: 0;
+    }
+  }
+}

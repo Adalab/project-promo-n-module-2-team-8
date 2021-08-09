@@ -47,3 +47,8 @@
 .box9 {
   @include boxs(#a0c0cf);
 }
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
