@@ -12,6 +12,8 @@
   @media all and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
+    padding: 20px 40px 10px 30px;
+    background: linear-gradient(to bottom, $white-four, $white-Two);
   }
 }
 
@@ -36,7 +38,7 @@
   &--menu {
     width: 75px;
     height: 30px;
-    border: solid 1px $white-two;
+    border: solid 1px $white-Two;
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -57,7 +59,7 @@
   &--container {
     width: 240px;
     height: 329px;
-    background-color: $white-two;
+    background-color: $white-Two;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
     border-radius: 2px;
     box-sizing: border-box;

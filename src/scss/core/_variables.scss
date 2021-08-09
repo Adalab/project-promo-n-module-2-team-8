@@ -22,34 +22,32 @@ $slate: #3e5b65;
 $dark-green-blue: hsl(180, 64%, 19%);
 $white-Two: #fff;
 $dull-orange: #e17334;
+
 //tipography
-$font-merriweather: "Merriweather",
-serif;
-$font-montserrat: "Montserrat",
-sans-serif;
-$font-open: "Open Sans",
-sans-serif;
+$font-merriweather: "Merriweather", serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-open: "Open Sans", sans-serif;
 @mixin boxs {
-    width: 30px;
-    height: 25px;
+  width: 30px;
+  height: 25px;
 }
 
 @mixin form_title {
-    font-size: 18px;
-    font-weight: 600;
-    color: $gunmetal;
-    text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: $gunmetal;
+  text-transform: uppercase;
 }
 
 @mixin form_label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: $dark-green-blue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $dark-green-blue;
 }
 
 @mixin orange__button {
-    background-color: $dull-orange;
-    color: $white-two;
-    font-family: $font-open;
+  background-color: $dull-orange;
+  color: $white-two;
+  font-family: $font-open;
 }
