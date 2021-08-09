@@ -1,13 +1,22 @@
 /*index*/
 
 .page {
-  max-width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/*main*/
+
+.card {
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
 /*photo*/
+
 .photo__container {
   box-sizing: border-box;
   background: linear-gradient(to bottom, $bfcdd-0-silver, $pale-grey);
@@ -18,6 +27,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .photo__reset {
   &--container {
     width: 240px;
@@ -87,11 +97,9 @@
     background-size: cover;
     background-position: center;
   }
-
   &--rrss {
     display: flex;
     padding: 10px 0 12px 15px;
-
     &-icon {
       height: 32px;
       width: 32px;
@@ -108,90 +116,66 @@
 
 /*design*/
 
-.form_design {
-  width: 320px;
-
-  height: 340px;
+.design__legend {
   font-size: 18px;
   color: $gunmetal;
 }
 
-.colors {
+.desing__check {
   text-transform: uppercase;
   font-size: 14px;
   color: $gunmetal;
-}
-.container {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-}
-.colors {
-  grid-column: 1/2;
-  grid-row: 1/2;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 20px;
   margin-left: 39px;
 }
-.dark_blue {
-  grid-column: 2/3;
-  grid-row: 1/2;
+
+.desing__check--colors {
+  grid-column: 1/3;
+  grid-row: 1/4;
 }
-.color_red {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.orange {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.colors {
+
+.desing__check--section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.box1 {
-  @include boxs;
-  background-color: $dark-green-blue;
+  align-items: center;
 }
 
-.box2 {
-  @include boxs;
-  background-color: $dirty-blue;
-}
-
-.box3 {
-  @include boxs;
-  background-color: $hospital-green;
-}
-
-.box4 {
-  @include boxs;
-  background-color: $dried-blood;
-}
-
-.box5 {
-  @include boxs;
-  background-color: $rusty-red;
-}
-
-.box6 {
-  @include boxs;
-  background-color: $tomato;
-}
-
-.box7 {
-  @include boxs;
-  background-color: $slate;
-}
-
-.box8 {
-  @include boxs;
-  background-color: $faded-orange;
-}
-
-.box9 {
-  @include boxs;
-  background-color: $light-grey-blue;
+.desing__check--section__box {
+  display: flex;
+  grid-column: 3/4;
+  margin-left: 10px;
+  .box {
+    @include boxs;
+    &__1 {
+      background-color: $dark-green-blue;
+    }
+    &__2 {
+      background-color: $dirty-blue;
+    }
+    &__3 {
+      background-color: $hospital-green;
+    }
+    &__4 {
+      background-color: $dried-blood;
+    }
+    &__5 {
+      background-color: $rusty-red;
+    }
+    &__6 {
+      background-color: $tomato;
+    }
+    &__7 {
+      background-color: $slate;
+    }
+    &__8 {
+      background-color: $faded-orange;
+    }
+    &__9 {
+      background-color: $light-grey-blue;
+    }
+  }
 }
 
 /*fill*/
@@ -206,7 +190,6 @@
     color: $dull-orange;
     margin-right: 10px;
   }
-
   &__title {
     display: flex;
     margin-bottom: 21px;
@@ -220,12 +203,10 @@
 .fill {
   font-family: $font-open;
   margin: 0 19px 0 20px;
-
   &__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-
     &--label {
       @include form_label;
       grid-column: span 2;
@@ -244,36 +225,26 @@
       height: 30px;
       grid-column: span 1;
     }
-
     .photo__square {
       width: 30px;
       height: 30px;
       grid-column: span 1;
     }
-
-    /*&__line {
-      height: 1px;
-      background-color: $white-two;
-      margin-top: 40px;
-    }*/
+    // &__line {
+    //     height: 1px;
+    //     background-color: $white-Two;
+    //     margin-top: 40px;
+    // }
   }
 }
 
 /*share*/
 
-.form {
-  &__parameters {
-    @include form_title;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 41px;
-  }
-  &__title {
-    display: flex;
-    margin-bottom: 21px;
-    font-family: $font-open;
-    font-size: 18px;
-  }
+.share {
+  font-family: $font-open;
+  display: flex;
+  flex-direction: column;
+  margin: 0 19px 0 20px;
 }
 
 .fa-share-alt {
@@ -286,20 +257,13 @@
   margin-left: auto;
 }
 
-.share {
-  font-family: $font-open;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .dropdown {
   display: flex;
   flex-direction: column;
   align-items: center;
   &__button--create {
     background-color: $dull-orange;
-    color: $white-two;
+    color: $white-Two;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;

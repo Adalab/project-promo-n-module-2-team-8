@@ -1,41 +1,44 @@
-<section class="container">
-  <legend class="form_design">
+<section class="desing">
+  <legend class="design__legend">
     <include
       src="./parameters.html"
       icon="far fa-object-ungroup"
       text="Diseña"
       arrow="fas fa-chevron-down"
     ></include>
-
-    <fieldset class="check_box">
-      <label class="colors" for="colors"
-        >colores
-
-        <input type="radio" id="colors" name="blue" />
-
-        <section class="dark_blue">
-          <div class="box1"></div>
-          <div class="box2"></div>
-          <div class="box3"></div>
-        </section>
-
-        <input type="radio" id="colors" name="red" />
-
-        <section class="color_red">
-          <div class="box4"></div>
-          <div class="box5"></div>
-          <div class="box6"></div>
-        </section>
-
-        <input type="radio" id="colors" name="orange" />
-
-        <section class="orange">
-          <div class="box7"></div>
-          <div class="box8"></div>
-          <div class="box9"></div>
-        </section>
-        <hr />
-      </label>
-    </fieldset>
   </legend>
+
+  <fieldset class="desing__check">
+    <label class="desing__check--colors" for="colors">colores</label>
+
+    <section class="desing__check--section">
+      <input type="radio" id="colors" name="blue" />
+
+      <section class="desing__check--section__box">
+        <div class="box box__1"></div>
+        <div class="box box__2"></div>
+        <div class="box box__3"></div>
+      </section>
+    </section>
+
+    <section class="desing__check--section">
+      <input type="radio" id="colors" name="red" />
+
+      <section class="desing__check--section__box">
+        <div class="box box__4"></div>
+        <div class="box box__5"></div>
+        <div class="box box__6"></div>
+      </section>
+    </section>
+    <section class="desing__check--section">
+      <input type="radio" id="colors" name="orange" />
+
+      <section class="desing__check--section__box">
+        <div class="box box__7"></div>
+        <div class="box box__8"></div>
+        <div class="box box__9"></div>
+      </section>
+    </section>
+    <hr />
+  </fieldset>
 </section>
