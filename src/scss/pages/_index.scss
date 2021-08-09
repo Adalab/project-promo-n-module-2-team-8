@@ -88,7 +88,6 @@
 .section4 {
   &__button {
     background-color: $dirty-blue;
-    color: $white-two;
     font-family: $font-open;
     font-size: 16px;
     text-transform: uppercase;
@@ -96,6 +95,9 @@
     height: 42px;
     margin: 0 auto;
     border-radius: 20px;
+  }
+  &__nav {
+    color: $white-Two;
   }
 }
 
