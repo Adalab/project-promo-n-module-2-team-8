@@ -124,6 +124,15 @@
   }
 }
 
+//*arrow*/
+.form__arrow {
+  height: 18px;
+  width: 16px;
+  &--rotate {
+    transform: scaleY(-1);
+  }
+}
+
 /*design*/
 
 .design__legend {
