@@ -1,54 +1,139 @@
 .form_design {
-  width: 320px;
-  background-color: red;
-  height: 340px;
-  font-size: 18px;
-  color: #54585a;
+    width: 320px;
+    background-color: red;
+    height: 340px;
+    font-size: 18px;
+    color: #54585a;
 }
+
 .design {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 .icon {
-  font-size: 18px;
-  color: #e17334;
+    font-size: 18px;
+    color: #e17334;
 }
+
 .colors {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #54585a;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #54585a;
 }
+
 .check_box {
-  background-color: black;
+    background-color: black;
 }
+
 .box1 {
-  @include boxs(#114e4e);
+    @include boxs(#114e4e);
 }
+
 .box2 {
-  @include boxs(#438792);
+    @include boxs(#438792);
 }
+
 .box3 {
-  @include boxs(#a2deaf);
+    @include boxs(#a2deaf);
 }
+
 .box4 {
-  @include boxs(#420101);
+    @include boxs(#420101);
 }
+
 .box5 {
-  @include boxs(#bd1010);
+    @include boxs(#bd1010);
 }
+
 .box6 {
-  @include boxs(#e95626);
+    @include boxs(#e95626);
 }
+
 .box7 {
-  @include boxs(#3e5b65);
+    @include boxs(#3e5b65);
 }
+
 .box8 {
-  @include boxs(#eab052);
+    @include boxs(#eab052);
 }
+
 .box9 {
-  @include boxs(#a0c0cf);
+    @include boxs(#a0c0cf);
 }
+
 .page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Share*/
+
+.form {
+    &__parameters {
+        @include form_title;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 41px;
+    }
+    &__title {
+        display: flex;
+        margin-bottom: 21px;
+        font-family: $font-open;
+        font-size: 18px;
+    }
+}
+
+.fa-share-alt {
+    color: $dull-orange;
+    margin-right: 10px;
+}
+
+.fa-chevron-down {
+    color: $gunmetal;
+    margin-left: auto;
+}
+
+.share {
+    font-family: $font-open;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__button--create {
+        background-color: $dull-orange;
+        color: $white-two;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 12px;
+        width: 199px;
+        height: 50px;
+        margin: 30px 24px 30px 20px;
+        padding: 13px 18px 13px 17px;
+        border-bottom: solid 1px $white-two;
+    }
+    &__message {
+        font-family: $font-open;
+        font-size: 18px;
+        font-weight: 600;
+        color: $gunmetal;
+    }
+    &__button--tw {
+        background-color: $azure;
+        color: $white-two;
+        font-size: 14px;
+        border-radius: 3px;
+        width: 181px;
+        height: 30px;
+        margin: 10px 33px 30px 29px;
+        padding: 3px 9px 6px 10.5px;
+        border-bottom: solid 1px $white-two;
+    }
 }
