@@ -109,7 +109,7 @@
 
 .form_design {
   width: 320px;
-  background-color: red;
+
   height: 340px;
   font-size: 18px;
   color: $gunmetal;
@@ -120,11 +120,27 @@
   font-size: 14px;
   color: $gunmetal;
 }
-
 .check_box {
-  background-color: black;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
 }
-
+.colors {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.dark_blue {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.color_red {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.orange {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
 .box1 {
   @include boxs;
   background-color: $dark-green-blue;
