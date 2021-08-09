@@ -1,0 +1,62 @@
+<section class="fill">
+  <include
+    src="./parameters.html"
+    icon="far fa-keyboard"
+    text="Rellena"
+    arrow="fas fa-chevron-down"
+  ></include>
+  <form class="fill__form" action="https://formspree.io/f/mvodwylg">
+    <label class="fill__form--label" for="name"> Nombre Completo</label>
+    <input
+      class="fill__form--input name"
+      type="text"
+      placeholder="Ej: Sally Jill"
+      required
+    />
+
+    <label class="fill__form--label" for="job"> Puesto</label>
+    <input
+      class="fill__form--input job"
+      type="text"
+      placeholder="Ej: Front-end unicorn"
+      required
+    />
+
+    <label class="fill__form--label" for="photo photo__square">
+      Imagen de perfil</label
+    >
+    <button class="fill__form--input photo">Añadir imagen</button>
+    <div class="fill__form--input photo__square"></div>
+
+    <label class="fill__form--label" for="email"> Email</label>
+    <input
+      class="fill__form--input email"
+      type="email"
+      placeholder="Ej: sally-hill@gmail.com"
+      required
+    />
+
+    <label class="fill__form--label" for="tel"> Teléfono</label>
+    <input
+      class="fill__form--input tel"
+      type="tel"
+      placeholder="Ej: 555-55-55-55"
+      ^[0-9]{9}$
+    />
+
+    <label class="fill__form--label" for="linkedin"> Linkedin</label>
+    <input
+      class="fill__form--input linkedin"
+      type="text"
+      placeholder="Ej: linkedin.com/in/sally.hill"
+    />
+
+    <label class="fill__form--label" for="github"> Github</label>
+    <input
+      class="fill__form--input github"
+      type="text"
+      placeholder="Ej: @sally-hill"
+    />
+  </form>
+  <!--<div class="form__line"></div>-->
+</section>

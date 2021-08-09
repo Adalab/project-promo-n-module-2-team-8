@@ -1,9 +1,8 @@
-//colors
+//all colors
 $light-khaki: #f9f4dc;
 $pale-grey: #dde9ed;
 $black-20: rgba(0, 0, 0, 0.2);
 $tomato: #e95626;
-$hospital-green: #a2deaf;
 $dried-blood: #420101;
 $rusty-red: #bd1010;
 $faded-orange: #eab052;
@@ -12,7 +11,6 @@ $azure: #00a0f5;
 $white: #d5d5d5;
 $white-two: #d8d8d8;
 $black: #000;
-$gunmetal: #54585a;
 $pinkish-grey: #c5c5c5;
 $bfcdd-0-silver: #bfcdd0;
 $dirty-blue: #438792;
@@ -22,21 +20,32 @@ $slate: #3e5b65;
 $dark-green-blue: hsl(180, 64%, 19%);
 $white-two: #fff;
 $dull-orange: #e17334;
+
 //tipography
-$font-merriweather: "Merriweather",
-serif;
-$font-montserrat: "Montserrat",
-sans-serif;
-$font-open: "Open Sans",
-sans-serif;
+$font-merriweather: "Merriweather", serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-open: "Open Sans", sans-serif;
 @mixin boxs($background) {
-    width: 30px;
-    height: 25px;
+  width: 30px;
+  height: 25px;
 }
 
 @mixin form_title {
-    font-size: 18px;
-    font-weight: 600;
-    color: $gunmetal;
-    text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: $gunmetal;
+  text-transform: uppercase;
+}
+
+@mixin form_label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $dark-green-blue;
+}
+
+@mixin orange__button {
+  background-color: $dull-orange;
+  color: $white-two;
+  font-family: $font-open;
 }
