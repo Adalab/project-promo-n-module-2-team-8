@@ -178,20 +178,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  &__icon {
+    color: $dull-orange;
+    margin-right: 10px;
+  }
+
   &__title {
     display: flex;
     margin-bottom: 21px;
   }
-}
-
-.fa-keyboard {
-  color: $dull-orange;
-  margin-right: 10px;
-}
-
-.fa-chevron-down {
-  color: $gunmetal;
-  margin-left: auto;
+  &__arrow {
+    color: $gunmetal;
+    margin-left: auto;
+  }
 }
 
 .fill {
