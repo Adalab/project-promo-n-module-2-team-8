@@ -1,329 +1,319 @@
 /*index*/
 
 .page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+
 /*photo*/
+
 .photo__container {
-  box-sizing: border-box;
-  background: linear-gradient(to bottom, $bfcdd-0-silver, $pale-grey);
-  width: 100%;
-  height: 457px;
-  padding: 38px 35px 40px 45px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.photo__reset {
-  &--container {
-    width: 240px;
-    float: left;
-  }
-  &--menu {
-    width: 75px;
-    height: 30px;
-    border: solid 1px $white-two;
-    border-radius: 15px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, $bfcdd-0-silver, $pale-grey);
+    width: 100%;
+    height: 457px;
+    padding: 38px 35px 40px 45px;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-  }
-  &--text {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: $font-open;
-    font-size: 12px;
-    line-height: 20px;
-    color: $gunmetal;
-  }
+}
+
+.photo__reset {
+    &--container {
+        width: 240px;
+        float: left;
+    }
+    &--menu {
+        width: 75px;
+        height: 30px;
+        border: solid 1px $white-two;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &--text {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font-open;
+        font-size: 12px;
+        line-height: 20px;
+        color: $gunmetal;
+    }
 }
 
 .photo__card {
-  &--container {
-    width: 240px;
-    height: 329px;
-    background-color: $white-two;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
-    border-radius: 2px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-  &--rectangle {
-    background-color: $dirty-blue;
-    height: 42px;
-    width: 5px;
-    position: absolute;
-    margin: 23px 0 10px 0;
-  }
-  &--name {
-    font-family: $font-montserrat;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
-    color: $dark-green-blue;
-    width: 206px;
-    padding: 21px 14px 4px 20px;
-  }
-  &--frontend {
-    font-size: 16px;
-    width: 168px;
-    padding: 0 52px 10px 20px;
-    //mixins:
-    font-family: $font-montserrat;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-  &--photo {
-    height: 200px;
-    width: 240px;
-    background-image: url("../images/photo__imag.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-
-  &--rrss {
-    display: flex;
-    padding: 10px 0 12px 15px;
-
-    &-icon {
-      height: 32px;
-      width: 32px;
-      border: solid 2px $hospital-green;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $dark-green-blue;
-      margin: 0 5px;
+    &--container {
+        width: 240px;
+        height: 329px;
+        background-color: $white-two;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+        border-radius: 2px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
     }
-  }
+    &--rectangle {
+        background-color: $dirty-blue;
+        height: 42px;
+        width: 5px;
+        position: absolute;
+        margin: 23px 0 10px 0;
+    }
+    &--name {
+        font-family: $font-montserrat;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+        color: $dark-green-blue;
+        width: 206px;
+        padding: 21px 14px 4px 20px;
+    }
+    &--frontend {
+        font-size: 16px;
+        width: 168px;
+        padding: 0 52px 10px 20px;
+        //mixins:
+        font-family: $font-montserrat;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    &--photo {
+        height: 200px;
+        width: 240px;
+        background-image: url("../images/photo__imag.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    &--rrss {
+        display: flex;
+        padding: 10px 0 12px 15px;
+        &-icon {
+            height: 32px;
+            width: 32px;
+            border: solid 2px $hospital-green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $dark-green-blue;
+            margin: 0 5px;
+        }
+    }
 }
+
 
 /*design*/
 
 .form_design {
-  width: 320px;
-
-  height: 340px;
-  font-size: 18px;
-  color: $gunmetal;
+    width: 320px;
+    height: 340px;
+    font-size: 18px;
+    color: $gunmetal;
 }
 
 .colors {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: $gunmetal;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $gunmetal;
 }
+
 .container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
 }
+
 .colors {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin-left: 39px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 39px;
 }
+
 .dark_blue {
-  grid-column: 2/3;
-  grid-row: 1/2;
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
+
 .color_red {
-  grid-column: 2/3;
-  grid-row: 2/3;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
+
 .orange {
-  grid-column: 2/3;
-  grid-row: 3/4;
+    grid-column: 2/3;
+    grid-row: 3/4;
 }
+
 .colors {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
+
 .box1 {
-  @include boxs;
-  background-color: $dark-green-blue;
+    @include boxs;
+    background-color: $dark-green-blue;
 }
 
 .box2 {
-  @include boxs;
-  background-color: $dirty-blue;
+    @include boxs;
+    background-color: $dirty-blue;
 }
 
 .box3 {
-  @include boxs;
-  background-color: $hospital-green;
+    @include boxs;
+    background-color: $hospital-green;
 }
 
 .box4 {
-  @include boxs;
-  background-color: $dried-blood;
+    @include boxs;
+    background-color: $dried-blood;
 }
 
 .box5 {
-  @include boxs;
-  background-color: $rusty-red;
+    @include boxs;
+    background-color: $rusty-red;
 }
 
 .box6 {
-  @include boxs;
-  background-color: $tomato;
+    @include boxs;
+    background-color: $tomato;
 }
 
 .box7 {
-  @include boxs;
-  background-color: $slate;
+    @include boxs;
+    background-color: $slate;
 }
 
 .box8 {
-  @include boxs;
-  background-color: $faded-orange;
+    @include boxs;
+    background-color: $faded-orange;
 }
 
 .box9 {
-  @include boxs;
-  background-color: $light-grey-blue;
+    @include boxs;
+    background-color: $light-grey-blue;
 }
+
 
 /*fill*/
 
 .form {
-  &__parameters {
-    @include form_title;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  &__icon {
-    color: $dull-orange;
-    margin-right: 10px;
-  }
-
-  &__title {
-    display: flex;
-    margin-bottom: 21px;
-  }
-  &__arrow {
-    color: $gunmetal;
-    margin-left: auto;
-  }
+    &__parameters {
+        @include form_title;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__icon {
+        color: $dull-orange;
+        margin-right: 10px;
+    }
+    &__title {
+        display: flex;
+        margin-bottom: 21px;
+    }
+    &__arrow {
+        color: $gunmetal;
+        margin-left: auto;
+    }
 }
 
 .fill {
-  font-family: $font-open;
-  margin: 0 19px 0 20px;
-
-  &__form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-
-    &--label {
-      @include form_label;
-      grid-column: span 2;
-      margin-top: 4px;
+    font-family: $font-open;
+    margin: 0 19px 0 20px;
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        &--label {
+            @include form_label;
+            grid-column: span 2;
+            margin-top: 4px;
+        }
+        &--input {
+            border: solid $hospital-green 1px;
+            height: 30px;
+            margin: 7px 0 16px 0;
+            grid-column: span 2;
+        }
+        .photo {
+            @include orange__button;
+            border: none;
+            border-radius: 4px;
+            height: 30px;
+            grid-column: span 1;
+        }
+        .photo__square {
+            width: 30px;
+            height: 30px;
+            grid-column: span 1;
+        }
+        // &__line {
+        //     height: 1px;
+        //     background-color: $white-Two;
+        //     margin-top: 40px;
+        // }
     }
-    &--input {
-      border: solid $hospital-green 1px;
-      height: 30px;
-      margin: 7px 0 16px 0;
-      grid-column: span 2;
-    }
-    .photo {
-      @include orange__button;
-      border: none;
-      border-radius: 4px;
-      height: 30px;
-      grid-column: span 1;
-    }
-
-    .photo__square {
-      width: 30px;
-      height: 30px;
-      grid-column: span 1;
-    }
-
-    /*&__line {
-      height: 1px;
-      background-color: $white-two;
-      margin-top: 40px;
-    }*/
-  }
 }
+
 
 /*share*/
 
-.form {
-  &__parameters {
-    @include form_title;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 41px;
-  }
-  &__title {
-    display: flex;
-    margin-bottom: 21px;
+.share {
     font-family: $font-open;
-    font-size: 18px;
-  }
+    display: flex;
+    flex-direction: column;
+    margin: 0 19px 0 20px;
 }
 
 .fa-share-alt {
-  color: $dull-orange;
-  margin-right: 10px;
+    color: $dull-orange;
+    margin-right: 10px;
 }
 
 .fa-chevron-down {
-  color: $gunmetal;
-  margin-left: auto;
-}
-
-.share {
-  font-family: $font-open;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    color: $gunmetal;
+    margin-left: auto;
 }
 
 .dropdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &__button--create {
-    background-color: $dull-orange;
-    color: $white-two;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 12px;
-    width: 199px;
-    height: 50px;
-    margin: 30px 24px 30px 20px;
-    padding: 13px 18px 13px 17px;
-    border-bottom: solid 1px $white-two;
-  }
-  &__message {
-    font-family: $font-open;
-    font-size: 18px;
-    font-weight: 600;
-    color: $gunmetal;
-  }
-  &__button--tw {
-    background-color: $azure;
-    color: $white-two;
-    font-size: 14px;
-    border-radius: 3px;
-    width: 181px;
-    height: 30px;
-    margin: 10px 33px 30px 29px;
-    padding: 3px 9px 6px 10.5px;
-    border-bottom: solid 1px $white-two;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__button--create {
+        background-color: $dull-orange;
+        color: $white-Two;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 12px;
+        width: 199px;
+        height: 50px;
+        margin: 30px 24px 30px 20px;
+        padding: 13px 18px 13px 17px;
+        border-bottom: solid 1px $white-two;
+    }
+    &__message {
+        font-family: $font-open;
+        font-size: 18px;
+        font-weight: 600;
+        color: $gunmetal;
+    }
+    &__button--tw {
+        background-color: $azure;
+        color: $white-two;
+        font-size: 14px;
+        border-radius: 3px;
+        width: 181px;
+        height: 30px;
+        margin: 10px 33px 30px 29px;
+        padding: 3px 9px 6px 10.5px;
+        border-bottom: solid 1px $white-two;
+    }
 }
