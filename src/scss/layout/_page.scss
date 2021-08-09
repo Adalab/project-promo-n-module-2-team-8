@@ -107,90 +107,62 @@
 
 /*design*/
 
-.form_design {
-  width: 320px;
-
-  height: 340px;
+.design__legend {
   font-size: 18px;
   color: $gunmetal;
 }
-
-.colors {
+.desing__check {
   text-transform: uppercase;
   font-size: 14px;
   color: $gunmetal;
-}
-.container {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-}
-.colors {
-  grid-column: 1/2;
-  grid-row: 1/2;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 20px;
   margin-left: 39px;
 }
-.dark_blue {
-  grid-column: 2/3;
-  grid-row: 1/2;
+.desing__check--colors {
+  grid-column: 1/3;
+  grid-row: 1/4;
 }
-.color_red {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.orange {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.colors {
+.desing__check--section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  align-items: center;
 }
-.box1 {
-  @include boxs;
-  background-color: $dark-green-blue;
-}
-
-.box2 {
-  @include boxs;
-  background-color: $dirty-blue;
-}
-
-.box3 {
-  @include boxs;
-  background-color: $hospital-green;
-}
-
-.box4 {
-  @include boxs;
-  background-color: $dried-blood;
-}
-
-.box5 {
-  @include boxs;
-  background-color: $rusty-red;
-}
-
-.box6 {
-  @include boxs;
-  background-color: $tomato;
-}
-
-.box7 {
-  @include boxs;
-  background-color: $slate;
-}
-
-.box8 {
-  @include boxs;
-  background-color: $faded-orange;
-}
-
-.box9 {
-  @include boxs;
-  background-color: $light-grey-blue;
+.desing__check--section__box {
+  display: flex;
+  grid-column: 3/4;
+  margin-left: 10px;
+  .box {
+    @include boxs;
+    &__1 {
+      background-color: $dark-green-blue;
+    }
+    &__2 {
+      background-color: $dirty-blue;
+    }
+    &__3 {
+      background-color: $hospital-green;
+    }
+    &__4 {
+      background-color: $dried-blood;
+    }
+    &__5 {
+      background-color: $rusty-red;
+    }
+    &__6 {
+      background-color: $tomato;
+    }
+    &__7 {
+      background-color: $slate;
+    }
+    &__8 {
+      background-color: $faded-orange;
+    }
+    &__9 {
+      background-color: $light-grey-blue;
+    }
+  }
 }
 
 /*fill*/
