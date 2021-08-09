@@ -120,7 +120,7 @@
   font-size: 14px;
   color: $gunmetal;
 }
-.check_box {
+.container {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
@@ -141,6 +141,12 @@
 .orange {
   grid-column: 2/3;
   grid-row: 3/4;
+}
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .box1 {
   @include boxs;
