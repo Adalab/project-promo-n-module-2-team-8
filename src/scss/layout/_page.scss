@@ -7,6 +7,16 @@
 }
 
 
+/*main*/
+
+.card {
+    @media all and (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+
 /*photo*/
 
 .photo__container {
