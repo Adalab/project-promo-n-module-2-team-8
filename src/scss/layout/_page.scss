@@ -220,7 +220,7 @@
     margin-left: auto;
   }
   &__line {
-    border-bottom: solid $white-two;
+    border-bottom: solid $white-two 1px;
   }
 }
 
@@ -241,7 +241,15 @@
       height: 30px;
       margin: 7px 0 16px 0;
       grid-column: span 2;
+
+      &::placeholder {
+        font-family: $font-open;
+        font-size: 14px;
+        line-height: 20px;
+        color: $pinkish-grey;
+      }
     }
+
     .photo {
       @include orange__button;
       border: none;
