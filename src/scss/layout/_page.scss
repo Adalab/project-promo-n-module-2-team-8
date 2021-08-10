@@ -9,7 +9,7 @@
 /*******************************main*******************************/
 
 .card {
-  background: linear-gradient(to bottom, $white-four, $white-two);
+  background: linear-gradient(to bottom, $white-four, $white-three);
   @media all and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
@@ -46,7 +46,7 @@
   &--menu {
     width: 75px;
     height: 30px;
-    border: solid 1px $white-two;
+    border: solid 1px $white-three;
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -67,7 +67,7 @@
   &--container {
     width: 240px;
     height: 329px;
-    background-color: $white-two;
+    background-color: $white-three;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
     border-radius: 2px;
     box-sizing: border-box;
@@ -124,15 +124,6 @@
   }
 }
 
-//*******************************arrow*******************************/
-.form__arrow {
-  height: 18px;
-  width: 16px;
-  &--rotate {
-    transform: scaleY(-1);
-  }
-}
-
 /*******************************design*******************************/
 
 .design__legend {
@@ -156,6 +147,9 @@
 .design__check--colors {
   grid-column: 1/3;
   grid-row: 1/4;
+  font-family: $font-open;
+  font-size: 14px;
+  color: $gunmetal;
 }
 
 .design__check--section {
@@ -220,7 +214,21 @@
     margin-left: auto;
   }
   &__line {
-    border-bottom: solid $white-two 1px;
+    border-bottom: solid 1px $white-two;
+  }
+  &__arrow {
+    //*******arrow******/
+    height: 18px;
+    width: 16px;
+    &--rotate {
+      transform: scaleY(-1);
+    }
+  }
+  @media all and (min-width: 768px) {
+    width: 80vw;
+  }
+  @media all and (min-width: 1024px) {
+    width: 50vw;
   }
 }
 
