@@ -110,14 +110,13 @@
     }
 
     &__section3 {
-      margin: auto;
+      margin: 0 auto;
       font-size: 16px;
     }
   }
   .section1 {
     &__img {
       background-image: url(../images/tarjetas-molonas@2x.png);
-
       max-width: 419px;
       height: 107px;
     }
@@ -143,5 +142,8 @@
       color: $dull-orange;
       font-size: 28px;
     }
+  }
+  .section4 {
+    margin-top: 180px;
   }
 }
