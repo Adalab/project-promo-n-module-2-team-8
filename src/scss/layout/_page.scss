@@ -213,18 +213,16 @@
   &__arrow {
     color: $gunmetal;
     margin-left: auto;
+    height: 18px;
+    width: 16px;
+    &--rotate {
+      transform: rotate(180deg);
+    }
   }
   &__line {
     border-bottom: solid 1px $white-two;
   }
-  &__arrow {
-    //*******arrow******/
-    height: 18px;
-    width: 16px;
-    &--rotate {
-      transform: scaleY(-1);
-    }
-  }
+
   @media all and (min-width: 768px) {
     width: 80vw;
   }
@@ -280,16 +278,6 @@
   display: flex;
   flex-direction: column;
   margin: 0 19px 0 20px;
-}
-
-.fa-share-alt {
-  color: $dull-orange;
-  margin-right: 10px;
-}
-
-.fa-chevron-down {
-  color: $gunmetal;
-  margin-left: auto;
 }
 
 .dropdown {
