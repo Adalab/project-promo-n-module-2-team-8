@@ -1,1 +1,1 @@
-"use strict";console.log(">> Ready :)");
+"use strict";const collapsable=document.querySelector(".js__collapsable"),fieldset=document.querySelector(".js__fieldset");function handleClick(){console.log(collapsable),fieldset.classList.toggle("hidden"),collapsable.classList.toggle("form__arrow--rotate")}collapsable.addEventListener("click",handleClick);
