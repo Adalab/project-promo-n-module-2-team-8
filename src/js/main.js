@@ -13,3 +13,26 @@ function handleClick(ev) {
         ev.currentTarget.parentNode.parentNode.querySelector(".js__fieldset");
     fieldset.classList.toggle("hidden");
 }
+// let data{
+//     {
+//         palette: ,
+//         name: "",
+//         job: "",
+//         phone: "",
+//         email: "",z
+//         linkedin: "",
+//         github: "",
+//         photo: ""
+//       }
+// }
+const form =document.querySelector(".form");
+
+function handlerFormData(ev){
+
+    const inputId= ev.target.id;
+    const inputValue= ev.target.value;
+
+    console.log(inputId, inputValue);
+}
+
+form.addEventListener("change", handlerFormData);
