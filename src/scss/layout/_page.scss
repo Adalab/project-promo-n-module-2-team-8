@@ -196,7 +196,6 @@
 /*******************************fill*******************************/
 
 .form {
-  margin-bottom: 10%;
   &__parameters {
     @include form_title;
     display: grid;
@@ -208,7 +207,8 @@
   }
   &__title {
     display: flex;
-    margin-bottom: 21px;
+    margin-top: 10px;
+    margin-bottom: 7px;
   }
   &__arrow {
     color: $gunmetal;
