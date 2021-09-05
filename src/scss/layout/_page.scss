@@ -248,6 +248,8 @@
       height: 30px;
       margin: 7px 0 16px 0;
       grid-column: span 2;
+      font-size: 15px;
+      font-family: $font-open;
       &::placeholder {
         font-family: $font-open;
         font-size: 14px;
