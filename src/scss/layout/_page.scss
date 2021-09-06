@@ -265,9 +265,10 @@
   }
   &__arrow {
     color: $gunmetal;
-    margin-left: auto;
+    margin: 10px 0 0 auto;
     height: 18px;
     width: 16px;
+
     &--rotate {
       transform: rotate(180deg);
     }
