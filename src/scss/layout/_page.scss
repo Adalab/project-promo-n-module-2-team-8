@@ -325,11 +325,14 @@
             border-radius: 4px;
             height: 30px;
             grid-column: span 1;
+            padding: initial;
+            text-align: center;
         }
         .photo__square {
             width: 30px;
             height: 30px;
             grid-column: span 1;
+            padding: initial;
         }
     }
 }
