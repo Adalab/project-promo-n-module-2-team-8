@@ -10,7 +10,6 @@
 
 .card {
   background: linear-gradient(to bottom, $white-four, $white-three);
-  height: 100vh;
   @media all and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
