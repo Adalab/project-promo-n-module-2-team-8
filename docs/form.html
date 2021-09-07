@@ -25,14 +25,9 @@
   <body>
     <div class="page">
       <header class="form__header">
-        <img
-          class="form__header--image"
-          src="./assets/images/tarjetas-molonas.png"
-          alt="Awesome cards"
-          srcset=""
-        />
+          <a href="./index.html" alt="home" title="Home">
+              <img class="form__header--image" src="./assets/images/tarjetas-molonas.svg" alt="Awesome cards" srcset="" /></a>
       </header>
-
       <main class="card">
         <section class="photo__container">
           <div class="photo__reset--container">
@@ -43,76 +38,81 @@
               <li class="photo__reset--text">Reset</li>
             </ul>
           </div>
-          <div class="photo__card--container">
+          <div class="photo__card--container js-photo">
             <div class="photo__card--rectangle"></div>
             <p class="photo__card--name">Nombre Apellido</p>
             <p class="photo__card--frontend">Front-end developer</p>
             <div class="photo__card--photo"></div>
             <div class="photo__card--rrss">
-              <i class="fas fa-mobile-alt photo__card--rrss-icon"></i>
-              <i class="far fa-envelope photo__card--rrss-icon"></i>
-              <i class="fab fa-linkedin-in photo__card--rrss-icon"></i>
-              <i class="fab fa-github-alt photo__card--rrss-icon"></i>
+              <a href="" id="telLink">
+                <i class="fas fa-mobile-alt photo__card--rrss-icon"></i
+              ></a>
+              <a href="" id="emailLink"
+                ><i class="far fa-envelope photo__card--rrss-icon"></i
+              ></a>
+              <a href="" id="linkedinLink"
+                ><i class="fab fa-linkedin-in photo__card--rrss-icon"></i
+              ></a>
+              <a href="" id="githubLink"
+                ><i class="fab fa-github-alt photo__card--rrss-icon"></i
+              ></a>
             </div>
-          </div>
+                
         </section>
-
         <form class="form" action="">
-          <section class="design">
-            <legend class="design__legend">
+          <legend class="design__legend">
               <div class="form__parameters">
                 <h2 class="form__title"><i class="far fa-object-ungroup form__icon"></i>Diseña</h2>
                 <i class="fas fa-chevron-down form__arrow js__collapsable"></i>
               </div>
 
-            </legend>
 
-            <fieldset class="design__check js__fieldset">
-              <label class="design__check--colors" for="colors">colores</label>
+              <fieldset class="hidden design__check js__fieldset">
+                  <label class="design__check--colors" for="colors">colores</label>
 
-              <section class="design__check--section">
-                <input type="radio" id="colors" name="blue" />
+                  <section class="design__check--section">
+                      <input class="js-palette-1" type="radio" id="colors" name="color" value="palette-1" />
 
-                <section class="design__check--section__box">
-                  <div class="box box__1"></div>
-                  <div class="box box__2"></div>
-                  <div class="box box__3"></div>
-                </section>
-              </section>
+                      <section class="design__check--section__box">
+                          <div class="box box__1"></div>
+                          <div class="box box__2"></div>
+                          <div class="box box__3"></div>
+                      </section>
+                  </section>
 
-              <section class="design__check--section">
-                <input type="radio" id="colors" name="red" />
+                  <section class="design__check--section">
+                      <input class="js-palette-2" type="radio" id="colors" name="color" value="palette-2" />
 
-                <section class="design__check--section__box">
-                  <div class="box box__4"></div>
-                  <div class="box box__5"></div>
-                  <div class="box box__6"></div>
-                </section>
-              </section>
-              <section class="design__check--section">
-                <input type="radio" id="colors" name="orange" />
+                      <section class="design__check--section__box">
+                          <div class="box box__4"></div>
+                          <div class="box box__5"></div>
+                          <div class="box box__6"></div>
+                      </section>
+                  </section>
+                  <section class="design__check--section">
+                      <input class="js-palette-3" type="radio" id="colors" name="color" value="palette-3" />
 
-                <section class="design__check--section__box">
-                  <div class="box box__7"></div>
-                  <div class="box box__8"></div>
-                  <div class="box box__9"></div>
-                </section>
-              </section>
-              <hr />
-            </fieldset>
-            <hr class="form__line" />
-          </section>
-
+                      <section class="design__check--section__box">
+                          <div class="box box__7"></div>
+                          <div class="box box__8"></div>
+                          <div class="box box__9"></div>
+                      </section>
+                  </section>
+                  <hr />
+              </fieldset>
+              <hr class="form__line" />
+          </legend>
           <legend class="fill">
             <div class="form__parameters">
               <h2 class="form__title"><i class="far fa-keyboard form__icon"></i>Rellena</h2>
               <i class="fas fa-chevron-down form__arrow js__collapsable"></i>
             </div>
 
-            <fieldset class="fill__form js__collapsable">
+            <fieldset class="hidden fill__form js__fieldset">
               <label class="fill__form--label" for="name"> Nombre Completo</label>
               <input
                 class="fill__form--input name"
+                id="fullname"
                 type="text"
                 placeholder=" Ej: Sally Jill"
                 required
@@ -121,6 +121,7 @@
               <label class="fill__form--label" for="job"> Puesto</label>
               <input
                 class="fill__form--input job"
+                id="job"
                 type="text"
                 placeholder=" Ej: Front-end unicorn"
                 required
@@ -135,6 +136,7 @@
               <label class="fill__form--label" for="email"> Email</label>
               <input
                 class="fill__form--input email"
+                id="emailFill"
                 type="email"
                 placeholder=" Ej: sally-hill@gmail.com"
                 required
@@ -143,6 +145,7 @@
               <label class="fill__form--label" for="tel"> Teléfono</label>
               <input
                 class="fill__form--input tel"
+                id="telFill"
                 type="tel"
                 placeholder=" Ej: 555-55-55-55"
                 ^[0-9]{9}$
@@ -151,6 +154,7 @@
               <label class="fill__form--label" for="linkedin"> Linkedin</label>
               <input
                 class="fill__form--input linkedin"
+                id="linkedinFill"
                 type="text"
                 placeholder=" Ej: linkedin.com/in/sally.hill"
               />
@@ -158,6 +162,7 @@
               <label class="fill__form--label" for="github"> Github</label>
               <input
                 class="fill__form--input github"
+                id="githubFill"
                 type="text"
                 placeholder=" Ej: @sally-hill"
               />
@@ -166,31 +171,30 @@
           </legend>
 
           <legend class="share">
-            <div class="form__parameters">
-              <h2 class="form__title"><i class="fas fa-share-alt form__icon"></i>Comparte</h2>
-              <i class="fas fa-chevron-down form__arrow js__collapsable"></i>
-            </div>
+              <div class="form__parameters">
+                <h2 class="form__title"><i class="fas fa-share-alt form__icon"></i>Comparte</h2>
+                <i class="fas fa-chevron-down form__arrow js__collapsable"></i>
+              </div>
 
-            <fieldset class="dropdown">
-              <button class="dropdown__button--create">
-                <i class="far fa-address-card"></i> Crear tarjeta
-              </button>
+              <fieldset class="hidden dropdown js__fieldset">
+                  <button class="dropdown__button--create">
+          			<i class="far fa-address-card"></i> Crear tarjeta
+          		</button>
 
-              <!-- Aquí iría html de cuando se crea la tarjeta
+                  <!-- Aquí iría html de cuando se crea la tarjeta
                   <p class="dropdown__message">La tarjeta ha sido creada</p>
                   <button class="dropdown__button--tw">
           			<i class="fab fa-twitter"></i>Compartir en twitter
           		</button>
               </div> -->
-            </fieldset>
-            <hr class="form__line" />
+              </fieldset>
+              <hr class="form__line" />
           </legend>
-
         </form>
       </main>
 
       <footer class="footer">
-        <h6 class="footer__copyright">Name-team for awesome profile-cards @2021</h6>
+        <h6 class="footer__copyright">ochoPinocho for awesome profile-cards @2021</h6>
         <img
           class="footer__image"
           src="./assets/images/logo-adalab.png"

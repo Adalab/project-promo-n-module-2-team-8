@@ -10,6 +10,7 @@
 
 .card {
   background: linear-gradient(to bottom, $white-four, $white-three);
+  height: 100vh;
   @media all and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
@@ -99,6 +100,7 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
+    color: $gunmetal;
   }
   &--photo {
     height: 200px;
@@ -123,6 +125,57 @@
     }
   }
 }
+.palette-1 {
+  .photo__card {
+      &--rectangle {
+          background-color: $dirty-blue;
+      }
+      &--name {
+          color: $dark-green-blue;
+      }
+      &--rrss {
+          &-icon {
+              border: solid 2px $hospital-green;
+              color: $dark-green-blue;
+          }
+      }
+  }
+}
+
+.palette-2 {
+  .photo__card {
+      &--rectangle {
+          background-color: $rusty-red;
+      }
+      &--name {
+          color: $dried-blood;
+      }
+      &--rrss {
+          &-icon {
+              border: solid 2px $tomato;
+              color: $dried-blood;
+          }
+      }
+  }
+}
+
+.palette-3 {
+  .photo__card {
+      &--rectangle {
+          background-color: $faded-orange;
+      }
+      &--name {
+          color: $slate;
+      }
+      &--rrss {
+          &-icon {
+              border: solid 2px $light-grey-blue;
+              color: $slate;
+          }
+      }
+  }
+}
+
 
 /*******************************design*******************************/
 
@@ -207,12 +260,11 @@
   }
   &__title {
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 7px;
+    margin: 10px 0;
   }
   &__arrow {
     color: $gunmetal;
-    margin-left: auto;
+    margin: 10px 0 0 auto;
     height: 18px;
     width: 16px;
     &--rotate {
@@ -231,6 +283,10 @@
   }
 }
 
+// .square {
+//     height: 30px;
+//     width: 30px;
+// }
 .fill {
   font-family: $font-open;
   margin: 0 19px 0 20px;
@@ -265,11 +321,14 @@
       border-radius: 4px;
       height: 30px;
       grid-column: span 1;
+      padding: initial;
+      text-align: center;
     }
     .photo__square {
       width: 30px;
       height: 30px;
       grid-column: span 1;
+      padding: initial;
     }
   }
 }
@@ -319,5 +378,9 @@
 }
 
 .hidden {
+  display: none;
+}
+
+.hide--input {
   display: none;
 }
