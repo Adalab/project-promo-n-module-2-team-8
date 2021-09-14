@@ -22,29 +22,39 @@ function handleClick(ev) {
     fieldset.classList.toggle("hidden");
 }
 //**************************** FILL*********************************//
+
 const form = document.querySelector(".form");
 
 function handlerFormData(ev) {
+
     const inputId = ev.target.id;
 
     const inputValue = ev.target.value;
     if (inputId === "fullname") {
         document.querySelector(".photo__card--name").innerHTML = inputValue;
+        console.log(inputValue);
+        storageArray.fullname = inputValue;
     } else if (inputId === "job") {
         document.querySelector(".photo__card--frontend").innerHTML = inputValue;
+        storageArray.job = inputValue;
     } else if (inputId === "telFill") {
         document.querySelector("#telLink").href = "tel:" + inputValue;
+        storageArray.telFill = inputValue;
     } else if (inputId === "emailFill") {
         document.querySelector("#emailLink").href = "mailto:" + inputValue;
+        storageArray.emailFill = inputValue;
     } else if (inputId === "linkedinFill") {
         document.querySelector("#linkedinLink").href =
             "https://www.linkedin.com/in/:" + inputValue;
+        storageArray.linkedinFill = inputValue;
+
     } else if (inputId === "githubFill") {
         document.querySelector("#githubLink").href =
             "https://github.com/" + inputValue;
+        storageArray.githubFill = inputValue;
     }
-
-    console.log(inputId, inputValue);
+    saveLocalStorage();
+    //console.log(inputId, inputValue);
 }
 
 form.addEventListener("change", handlerFormData);
@@ -61,15 +71,19 @@ function changeColors(event) {
         photoPalette.classList.add("palette-1");
         photoPalette.classList.remove("palette-2");
         photoPalette.classList.remove("palette-3");
+        storageArray.id.colors1 = palette - 1;
     } else if (event.currentTarget.value === "palette-2") {
         photoPalette.classList.remove("palette-1");
         photoPalette.classList.add("palette-2");
         photoPalette.classList.remove("palette-3");
+        storageArray.id.colors2 = palette - 2;
     } else if (event.currentTarget.value === "palette-3") {
         photoPalette.classList.remove("palette-1");
         photoPalette.classList.remove("palette-2");
         photoPalette.classList.add("palette-3");
+        storageArray.id.colors3 = palette - 3;
     }
+    saveLocalStorage();
 }
 
 palette1.addEventListener("click", changeColors);
@@ -101,6 +115,7 @@ function handleGetImage(e) {
     const myFile = e.currentTarget.files[0];
     fr.addEventListener("load", writeImage);
     fr.readAsDataURL(myFile);
+
 }
 
 /**
@@ -115,6 +130,7 @@ function writeImage() {
      */
     profileImage.style.backgroundImage = `url(${fr.result})`;
     profilePreview.style.backgroundImage = `url(${fr.result})`;
+    saveLocalStorage();
 }
 
 /**
@@ -132,3 +148,40 @@ function writeImage() {
  */
 
 getFile.addEventListener("change", handleGetImage);
+
+//**************************** localStorage*********************************//
+
+let storageArray =
+{
+    "id": {
+        "colors1": "", "colors2": "", "colors3": "",
+    },
+
+    "fullname": "",
+    "job": "",
+    "img-selector": "",
+    "emailFill": "",
+    "telFill": "",
+    "linkedinFill": "",
+    "githubFill": "",
+
+}
+
+    ;
+
+function saveLocalStorage() {
+    localStorage.setItem('saveInfo', JSON.stringify(storageArray));
+
+
+}
+
+
+function getLocalStorage() {
+
+    const personalInfo = JSON.parse(localStorage.getItem('saveInfo'));
+    console.log(personalInfo);
+    if (personalInfo !== null) {
+        saveInfo = personalInfo
+    }
+}
+getLocalStorage();
