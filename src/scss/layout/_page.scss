@@ -124,57 +124,57 @@
     }
   }
 }
+
 .palette-1 {
   .photo__card {
-      &--rectangle {
-          background-color: $dirty-blue;
+    &--rectangle {
+      background-color: $dirty-blue;
+    }
+    &--name {
+      color: $dark-green-blue;
+    }
+    &--rrss {
+      &-icon {
+        border: solid 2px $hospital-green;
+        color: $dark-green-blue;
       }
-      &--name {
-          color: $dark-green-blue;
-      }
-      &--rrss {
-          &-icon {
-              border: solid 2px $hospital-green;
-              color: $dark-green-blue;
-          }
-      }
+    }
   }
 }
 
 .palette-2 {
   .photo__card {
-      &--rectangle {
-          background-color: $rusty-red;
+    &--rectangle {
+      background-color: $rusty-red;
+    }
+    &--name {
+      color: $dried-blood;
+    }
+    &--rrss {
+      &-icon {
+        border: solid 2px $tomato;
+        color: $dried-blood;
       }
-      &--name {
-          color: $dried-blood;
-      }
-      &--rrss {
-          &-icon {
-              border: solid 2px $tomato;
-              color: $dried-blood;
-          }
-      }
+    }
   }
 }
 
 .palette-3 {
   .photo__card {
-      &--rectangle {
-          background-color: $faded-orange;
+    &--rectangle {
+      background-color: $faded-orange;
+    }
+    &--name {
+      color: $slate;
+    }
+    &--rrss {
+      &-icon {
+        border: solid 2px $light-grey-blue;
+        color: $slate;
       }
-      &--name {
-          color: $slate;
-      }
-      &--rrss {
-          &-icon {
-              border: solid 2px $light-grey-blue;
-              color: $slate;
-          }
-      }
+    }
   }
 }
-
 
 /*******************************design*******************************/
 
@@ -248,6 +248,7 @@
 /*******************************fill*******************************/
 
 .form {
+  margin-bottom: 10%;
   &__parameters {
     @include form_title;
     display: grid;
@@ -273,7 +274,6 @@
   &__line {
     border-bottom: solid 1px $white-two;
   }
-
   @media all and (min-width: 768px) {
     width: 80vw;
   }
@@ -328,6 +328,8 @@
       height: 30px;
       grid-column: span 1;
       padding: initial;
+      background-size: cover;
+      background-position: center;
     }
   }
 }
