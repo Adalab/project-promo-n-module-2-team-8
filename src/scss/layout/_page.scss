@@ -9,6 +9,7 @@
 /*******************************main*******************************/
 
 .card {
+  flex-grow: 1;
   background: linear-gradient(to bottom, $white-four, $white-three);
   @media all and (min-width: 768px) {
     display: flex;
@@ -322,6 +323,7 @@
       grid-column: span 1;
       padding: initial;
       text-align: center;
+      padding-top: 10px;
     }
     .photo__square {
       width: 30px;
