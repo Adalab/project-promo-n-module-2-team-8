@@ -1,94 +1,81 @@
 /* eslint-disable no-undef */
 /* eslint-disable indent */
 /* eslint-disable quotes */
-"use strict";
+'use strict';
 
 //**************************** COLLAPSABLE*********************************//
 
-const collapsable = document.querySelectorAll(".js__collapsable");
-const design = document.querySelector(".js-design");
-const fill = document.querySelector(".js-fill");
-const share = document.querySelector(".js-share");
+const collapsable = document.querySelectorAll('.js__collapsable');
+const design = document.querySelector('.js-design');
+const fill = document.querySelector('.js-fill');
+const share = document.querySelector('.js-share');
 
 for (let i = 0; i < collapsable.length; i++) {
-    collapsable[i].addEventListener("click", handleClick);
+    collapsable[i].addEventListener('click', handleClick);
 }
 
 function handleClick(ev) {
-    ev.currentTarget.classList.toggle("form__arrow--rotate");
+    ev.currentTarget.classList.toggle('form__arrow--rotate');
 
     const fieldset =
-        ev.currentTarget.parentNode.parentNode.querySelector(".js__fieldset");
-    fieldset.classList.toggle("hidden");
+        ev.currentTarget.parentNode.parentNode.querySelector('.js__fieldset');
+    fieldset.classList.toggle('hidden');
 }
 //**************************** FILL*********************************//
 
-const form = document.querySelector(".form");
+const form = document.querySelector('.form');
 
 function handlerFormData(ev) {
-
     const inputId = ev.target.id;
-
     const inputValue = ev.target.value;
-    if (inputId === "fullname") {
-        document.querySelector(".photo__card--name").innerHTML = inputValue;
-        console.log(inputValue);
-        storageArray.fullname = inputValue;
-    } else if (inputId === "job") {
-        document.querySelector(".photo__card--frontend").innerHTML = inputValue;
-        storageArray.job = inputValue;
-    } else if (inputId === "telFill") {
-        document.querySelector("#telLink").href = "tel:" + inputValue;
-        storageArray.telFill = inputValue;
-    } else if (inputId === "emailFill") {
-        document.querySelector("#emailLink").href = "mailto:" + inputValue;
-        storageArray.emailFill = inputValue;
-    } else if (inputId === "linkedinFill") {
-        document.querySelector("#linkedinLink").href =
-            "https://www.linkedin.com/in/:" + inputValue;
-        storageArray.linkedinFill = inputValue;
-
-    } else if (inputId === "githubFill") {
-        document.querySelector("#githubLink").href =
-            "https://github.com/" + inputValue;
-        storageArray.githubFill = inputValue;
+    if (inputId === 'fullname') {
+        document.querySelector('.photo__card--name').innerHTML = inputValue;
+    } else if (inputId === 'job') {
+        document.querySelector('.photo__card--frontend').innerHTML = inputValue;
+    } else if (inputId === 'telFill') {
+        document.querySelector('#telLink').href = 'tel:' + inputValue;
+    } else if (inputId === 'emailFill') {
+        document.querySelector('#emailLink').href = 'mailto:' + inputValue;
+    } else if (inputId === 'linkedinFill') {
+        document.querySelector('#linkedinLink').href =
+            'https://www.linkedin.com/in/:' + inputValue;
+    } else if (inputId === 'githubFill') {
+        document.querySelector('#githubLink').href =
+            'https://github.com/' + inputValue;
     }
     saveLocalStorage();
     //console.log(inputId, inputValue);
 }
 
-form.addEventListener("change", handlerFormData);
+form.addEventListener('change', handlerFormData);
 
 //****************************  palette selection*********************************//
 
-const photoPalette = document.querySelector(".js-photo");
-const palette1 = document.querySelector(".js-palette-1");
-const palette2 = document.querySelector(".js-palette-2");
-const palette3 = document.querySelector(".js-palette-3");
+const photoPalette = document.querySelector('.js-photo');
+const palette1 = document.querySelector('.js-palette-1');
+const palette2 = document.querySelector('.js-palette-2');
+const palette3 = document.querySelector('.js-palette-3');
 
 function changeColors(event) {
-    if (event.currentTarget.value === "palette-1") {
-        photoPalette.classList.add("palette-1");
-        photoPalette.classList.remove("palette-2");
-        photoPalette.classList.remove("palette-3");
-        storageArray.id.colors1 = palette - 1;
-    } else if (event.currentTarget.value === "palette-2") {
-        photoPalette.classList.remove("palette-1");
-        photoPalette.classList.add("palette-2");
-        photoPalette.classList.remove("palette-3");
-        storageArray.id.colors2 = palette - 2;
-    } else if (event.currentTarget.value === "palette-3") {
-        photoPalette.classList.remove("palette-1");
-        photoPalette.classList.remove("palette-2");
-        photoPalette.classList.add("palette-3");
-        storageArray.id.colors3 = palette - 3;
+    if (event.currentTarget.value === '1') {
+        photoPalette.classList.add('palette-1');
+        photoPalette.classList.remove('palette-2');
+        photoPalette.classList.remove('palette-3');
+    } else if (event.currentTarget.value === '2') {
+        photoPalette.classList.remove('palette-1');
+        photoPalette.classList.add('palette-2');
+        photoPalette.classList.remove('palette-3');
+    } else if (event.currentTarget.value === '3') {
+        photoPalette.classList.remove('palette-1');
+        photoPalette.classList.remove('palette-2');
+        photoPalette.classList.add('palette-3');
     }
     saveLocalStorage();
 }
 
-palette1.addEventListener("click", changeColors);
-palette2.addEventListener("click", changeColors);
-palette3.addEventListener("click", changeColors);
+palette1.addEventListener('click', changeColors);
+palette2.addEventListener('click', changeColors);
+palette3.addEventListener('click', changeColors);
 
 function handleGetImage(e) {
     console.log(e);
@@ -98,10 +85,10 @@ function handleGetImage(e) {
 
 const fr = new FileReader();
 
-const getFile = document.querySelector(".js__input");
+const getFile = document.querySelector('.js__input');
 
-const profileImage = document.querySelector(".photo__card--photo");
-const profilePreview = document.querySelector(".photo__square");
+const profileImage = document.querySelector('.photo__card--photo');
+const profilePreview = document.querySelector('.photo__square');
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -113,9 +100,8 @@ const profilePreview = document.querySelector(".photo__square");
  */
 function handleGetImage(e) {
     const myFile = e.currentTarget.files[0];
-    fr.addEventListener("load", writeImage);
+    fr.addEventListener('load', writeImage);
     fr.readAsDataURL(myFile);
-
 }
 
 /**
@@ -138,8 +124,8 @@ function writeImage() {
  * que está oculto
  */
 /*function fakeFileClick() {
-  fileField.click();
-}*/
+      fileField.click();
+    }*/
 
 /**
  * Añadimos los listeners necesarios:
@@ -147,41 +133,51 @@ function writeImage() {
  * - al campo oculto para cuando cambie su value
  */
 
-getFile.addEventListener("change", handleGetImage);
+getFile.addEventListener('change', handleGetImage);
 
 //**************************** localStorage*********************************//
 
-let storageArray =
-{
-    "id": {
-        "colors1": "", "colors2": "", "colors3": "",
-    },
+let storageArray = {
+    palette: '',
+    fullname: '',
+    job: '',
+    emailFill: '',
+    telFill: '',
+    linkedinFill: '',
+    githubFill: '',
+    imgselector: '',
+};
+const formStorage = document.querySelector('.js-form');
 
-    "fullname": "",
-    "job": "",
-    "img-selector": "",
-    "emailFill": "",
-    "telFill": "",
-    "linkedinFill": "",
-    "githubFill": "",
-
+function handlerFormStorage(ev) {
+    const inputId = ev.target.id;
+    const inputValue = ev.target.value;
+    storageArray[inputId] = inputValue;
+    console.log(storageArray);
 }
-
-    ;
+form.addEventListener('change', handlerFormStorage);
 
 function saveLocalStorage() {
-    localStorage.setItem('saveInfo', JSON.stringify(storageArray));
-
-
+    localStorage.setItem('storageArray', JSON.stringify(storageArray));
 }
-
 
 function getLocalStorage() {
-
-    const personalInfo = JSON.parse(localStorage.getItem('saveInfo'));
-    console.log(personalInfo);
+    //Obtenemos lo que hay en el local storage
+    const personalInfo = localStorage.getItem('storageArray');
+    //preguntamos si lo que me ha devuelto está vacío o no
     if (personalInfo !== null) {
-        saveInfo = personalInfo
+        const arrayLocalStorage = JSON.parse(personalInfo);
+        storageArray = arrayLocalStorage;
     }
 }
+
 getLocalStorage();
+
+//**************************** reset*********************************//
+const resetButton = document.querySelector('.photo__reset--container');
+
+function handleReset() {
+    location.reload();
+}
+
+resetButton.addEventListener('click', handleReset);
