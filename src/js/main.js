@@ -22,6 +22,7 @@ function handleClick(ev) {
     fieldset.classList.toggle("hidden");
     const removeSelector = fieldset.parentNode.classList;
     console.log(fieldset.classList);
+
     if (removeSelector.value === 'design__legend') {
         fill.classList.add('hidden');
         share.classList.add('hidden');
