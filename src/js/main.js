@@ -6,9 +6,9 @@
 //**************************** COLLAPSABLE*********************************//
 
 const collapsable = document.querySelectorAll(".js__collapsable");
-const design = document.querySelector(".js-design");
-const fill = document.querySelector(".js-fill");
-const share = document.querySelector(".js-share");
+const design = document.querySelector(".design__check");
+const fill = document.querySelector(".fill__form");
+const share = document.querySelector(".dropdown");
 
 for (let i = 0; i < collapsable.length; i++) {
     collapsable[i].addEventListener("click", handleClick);
@@ -16,10 +16,25 @@ for (let i = 0; i < collapsable.length; i++) {
 
 function handleClick(ev) {
     ev.currentTarget.classList.toggle("form__arrow--rotate");
-
     const fieldset =
         ev.currentTarget.parentNode.parentNode.querySelector(".js__fieldset");
+    console.log(fieldset.parentNode.classList.value);
     fieldset.classList.toggle("hidden");
+    const removeSelector = fieldset.parentNode.classList;
+    console.log(fieldset.classList);
+    if (removeSelector.value === 'design__legend') {
+        fill.classList.add('hidden');
+        share.classList.add('hidden');
+    }
+    else if (removeSelector.value === 'fill') {
+        design.classList.add('hidden');
+        share.classList.add('hidden');
+    }
+    else if (removeSelector.value === 'share') {
+        design.classList.add('hidden');
+        fill.classList.add('hidden');
+    }
+
 }
 //**************************** FILL*********************************//
 
