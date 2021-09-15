@@ -6,9 +6,9 @@
 //**************************** COLLAPSABLE*********************************//
 
 const collapsable = document.querySelectorAll('.js__collapsable');
-const design = document.querySelector('.js-design');
-const fill = document.querySelector('.js-fill');
-const share = document.querySelector('.js-share');
+const design = document.querySelector('.design__check');
+const fill = document.querySelector('.fill__form');
+const share = document.querySelector('.dropdown');
 
 for (let i = 0; i < collapsable.length; i++) {
     collapsable[i].addEventListener('click', handleClick);
